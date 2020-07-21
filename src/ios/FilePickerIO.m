@@ -84,6 +84,8 @@ FSConfig *config;
             config.storeOptions = storeOptions;
         }
         FSTheme *theme = [FSTheme filestackTheme];
+        UIColor *secondaryColor = [UIColor colorWithRed: 0.84 green: 0.50 blue: 0.13 alpha: 1.00];
+        theme.progressCircleProgressColor = secondaryColor;
         dispatch_async(dispatch_get_main_queue(), ^{
           FSPickerController *fsPickerController = [[FSPickerController alloc] initWithConfig:config theme:theme];
           fsPickerController.fsDelegate = self;
